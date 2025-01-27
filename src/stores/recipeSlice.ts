@@ -1,3 +1,11 @@
-export const createRecipesSlice = (set, get, api) => ({
+import {StateCreator} from "zustand"
+
+type Category = object
+
+export type RecipesSliceType = {
+    categories: Category[]  
+}
+
+export const createRecipesSlice : StateCreator<RecipesSliceType>= () => ({
     categories: []
 })
