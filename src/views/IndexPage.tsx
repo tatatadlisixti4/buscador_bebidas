@@ -4,8 +4,6 @@ import DrinkCard from "../components/DrinkCard"
 
 export default function IndexPage() {
     const drinks = useAppStore((state) => state.drinks)
-    console.log(drinks)
-    
     const hasDrinks = useMemo(() => drinks.length, [drinks])
 
     return (
