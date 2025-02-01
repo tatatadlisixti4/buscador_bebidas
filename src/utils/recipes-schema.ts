@@ -22,3 +22,4 @@ export const DrinkAPIResponse = z.object({
 export const DrinksAPIResponse = z.object({
     drinks: z.array(DrinkAPIResponse)
 })
+

@@ -7,6 +7,7 @@ export async function getCategories() {
     const {data} = await axios(url)
     const result = CategoriesAPIResponseSchema.safeParse(data)
     if(result.success) return result.data
+    return {drinks: []}
 }
 
 export async function getRecipes(filters: searchFilter) {
@@ -19,11 +20,10 @@ export async function getRecipes(filters: searchFilter) {
     const response2 = DrinksAPIResponse.safeParse(ingredientsList)
 
     if(response.success && response2.success) {
-        const filteredDrinks : Drinks  = categoryList.drinks.filter((drinkByCategory : Drink) => {
+        const filteredDrinks : Drinks = categoryList.drinks.filter((drinkByCategory : Drink) => {
             return ingredientsList.drinks.some((drinkByIngredient : Drink) => drinkByIngredient.idDrink === drinkByCategory.idDrink)
         })
         return filteredDrinks
-    } else {
-        console.log('incorrecto')
     }
+    return []
 }
