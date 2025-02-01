@@ -41,11 +41,12 @@ export default function Header() {
         <header className={isHome ? 'bg-header bg-center bg-cover' : 'bg-slate-800'}>
             <div className="mx-auto container px-5 py-16">
                 <div className="flex justify-between items-center">
-                    <div>
+                    <div className='flex items-center gap-10'>
                         <img className="w-32" src="/logo2.svg" alt="Logotipo" />
+                        <h2 className='text-8xl font-bold uppercase border-2 p-2 border-slate-800 bg-rose-200'>Moe's</h2>
                     </div>
 
-                    <nav className='flex gap-4 p-2 border-[2px] rounded-lg bg-slate-600'>
+                    <nav className='flex gap-4 p-3 border-[2px] bg-slate-600'>
                         <NavLink
                             to="/"
                             className={({isActive}) => isActive ?  'text-orange-700 uppercase font-bold' : 'text-white uppercase font-bold'}
@@ -59,7 +60,7 @@ export default function Header() {
 
                 {isHome && (
                     <form 
-                        className='md:w-1/2 2xl:w-1/3 border-[2px] bg-slate-600 my-32 p-10 rounded-lg shadow space-y-6'
+                        className='md:w-1/2 2xl:w-1/3 border-[2px] bg-slate-600 my-32 p-10 shadow space-y-6'
                         onSubmit={handleSubmit}
                     >
                         <div className='space-y-4'>
