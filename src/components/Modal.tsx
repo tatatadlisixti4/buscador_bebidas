@@ -51,23 +51,33 @@ export default function Modal() {
                                 leaveTo="opacity-0 scale-95"
                             >
                                 <DialogPanel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6" >
-                                <DialogTitle as="h3" className="text-gray-900 text-4xl font-extrabold my-5 text-center">
-                                    {selectedRecipe.strDrink}
-                                </DialogTitle>
-                                <img 
-                                    src={selectedRecipe.strDrinkThumb} 
-                                    alt={`Imagen de ${selectedRecipe.strDrink}`} 
-                                    className='mx-auto w-96'
-                                />
-                                <DialogTitle as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
-                                    Ingredientes y Cantidades
-                                </DialogTitle>
-                                {renderIngredients() }
+                                    <DialogTitle as="h3" className="text-gray-900 text-4xl font-extrabold my-5 text-center">
+                                        {selectedRecipe.strDrink}
+                                    </DialogTitle>
+                                    <img 
+                                        src={selectedRecipe.strDrinkThumb} 
+                                        alt={`Imagen de ${selectedRecipe.strDrink}`} 
+                                        className='mx-auto w-96'
+                                    />
+                                    <DialogTitle as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
+                                        Ingredientes y Cantidades
+                                    </DialogTitle>
+                                    {renderIngredients() }
 
-                                <DialogTitle as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
-                                    Instrucciones
-                                </DialogTitle>
-                                <p className='text-lg'>{selectedRecipe.strInstructions}</p>
+                                    <DialogTitle as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
+                                        Instrucciones
+                                    </DialogTitle>
+                                    <p className='text-lg'>{selectedRecipe.strInstructions}</p>
+                                    <div className='mt-5 flex justify-between gap-4'>
+                                        <button
+                                            className='w-full rounded bg-gray-600 p-3 font-bold uppercase text-white shadow hover:bg-gray-500'
+                                            onClick={closeModal}
+                                        >Cerrar</button>
+                                        <button
+                                            className='w-full rounded bg-orange-600 p-3 font-bold uppercase text-white shadow hover:bg-orange-500'
+                                        >Favoritos</button>
+
+                                    </div>
                                 
                                 </DialogPanel>
                             </TransitionChild>
