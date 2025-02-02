@@ -40,20 +40,32 @@ export default function Header() {
     return (
         <header className={isHome ? 'bg-header bg-center bg-cover' : 'bg-sky-300'}>
             <div className="mx-auto container px-5 py-16">
-                <div className="flex justify-between items-center">
-                    <div className='flex items-center gap-10'>
+                <div 
+                    className="md:flex md:justify-between md:items-center grid grid-cols-1"
+                >
+                    <div className='order-2 md:order-1 flex items-center gap-10'>
                         <img className="w-32" src="/logo2.svg" alt="Logotipo" />
                         <h2 className='text-8xl font-bold uppercase border-[3px] p-2 border-slate-800 bg-rose-200'>Moe's</h2>
                     </div>
 
-                    <nav className={isHome ? 'flex gap-4 p-3 border-[3px] bg-slate-600': 'flex gap-4 p-3 border-[3px] border-slate-800 bg-rose-200'}>
+                    <nav className={isHome ? 
+                            'order-1 md:order-2 mb-20 md:mb-0 flex gap-4 p-3 border-[3px] bg-slate-600' : 
+                            'order-1 md:order-2 mb-[50px] md:mb-0 flex gap-4 p-3 border-[3px] border-slate-800 bg-rose-200'}>
                         <NavLink
                             to="/"
-                            className={({isActive}) => isActive ?  'text-orange-700 uppercase font-bold' : isHome ? 'text-white uppercase font-bold': 'text-black uppercase font-bold'}
+                            className={({isActive}) => isActive ?  
+                                'text-orange-700 uppercase font-bold' : 
+                                isHome ? 
+                                    'text-white uppercase font-bold' : 
+                                    'text-black uppercase font-bold'}
                         >Inicio</NavLink>
                         <NavLink
                             to="/favoritos"
-                            className={({isActive})  => isActive ?  'text-orange-700 uppercase font-bold' : isHome ? 'text-white uppercase font-bold': 'text-black uppercase font-bold'}
+                            className={({isActive})  => isActive ?  
+                                'text-orange-700 uppercase font-bold' : 
+                                isHome ? 
+                                    'text-white uppercase font-bold' : 
+                                    'text-black uppercase font-bold'}
                         >Favoritos</NavLink>
                     </nav>
                 </div>
