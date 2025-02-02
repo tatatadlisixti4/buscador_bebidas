@@ -43,10 +43,10 @@ export default function Header() {
                 <div className="flex justify-between items-center">
                     <div className='flex items-center gap-10'>
                         <img className="w-32" src="/logo2.svg" alt="Logotipo" />
-                        <h2 className='text-8xl font-bold uppercase border-2 p-2 border-slate-800 bg-rose-200'>Moe's</h2>
+                        <h2 className='text-8xl font-bold uppercase border-[3px] p-2 border-slate-800 bg-rose-200'>Moe's</h2>
                     </div>
 
-                    <nav className={isHome ? 'flex gap-4 p-3 border-[2px] bg-slate-600': 'flex gap-4 p-3 border-[2px] bg-rose-200'}>
+                    <nav className={isHome ? 'flex gap-4 p-3 border-[3px] bg-slate-600': 'flex gap-4 p-3 border-[3px] border-slate-800 bg-rose-200'}>
                         <NavLink
                             to="/"
                             className={({isActive}) => isActive ?  'text-orange-700 uppercase font-bold' : isHome ? 'text-white uppercase font-bold': 'text-black uppercase font-bold'}
