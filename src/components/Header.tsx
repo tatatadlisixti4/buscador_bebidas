@@ -31,7 +31,7 @@ export default function Header() {
         
         // TODO: Validar
         if(Object.values(searchFilters).includes('')) {
-            console.log("hola")
+            console.log("Faltan datos")
             return
         }
         searchRecipes(searchFilters)
