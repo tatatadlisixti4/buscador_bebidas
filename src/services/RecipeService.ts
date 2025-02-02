@@ -13,6 +13,8 @@ export async function getCategories() {
 
 export async function getRecipes(filters: searchFilter) {
     const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filters.category}`
+    // Se traduce input español al ingles
+    // TODO: validar idioma para traducir o no
     const word = await translateToEnglish(filters.ingredient)
     const url2 = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${word}`
     const {data: categoryList} = await axios(url)
