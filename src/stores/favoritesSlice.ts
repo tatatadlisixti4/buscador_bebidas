@@ -1,6 +1,6 @@
 import {StateCreator} from "zustand"
 import {Recipe} from "../types"
-import { createRecipesSlice, RecipesSliceType } from "../stores/recipeSlice"
+import {createRecipesSlice, RecipesSliceType} from "./recipeSlice"
 
 export type FavoriteSliceType = {
     favorites: Recipe[]
