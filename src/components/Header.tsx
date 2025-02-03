@@ -46,14 +46,14 @@ export default function Header() {
                 <div 
                     className="md:flex md:justify-between md:items-center grid grid-cols-1"
                 >
-                    <div className='order-2 md:order-1 flex items-center gap-10'>
-                        <img className="w-32" src="/logo2.svg" alt="Logotipo" />
-                        <h2 className='text-8xl font-bold uppercase border-[3px] p-2 border-slate-800 bg-rose-200'>Moe's</h2>
+                    <div className='order-2 md:order-1 md:flex items-center gap-10 space-y-10 md:space-y-0 '>
+                        <img className="w-32 m-auto" src="/logo2.svg" alt="Logotipo" />
+                        <h2 className='text-8xl font-bold uppercase border-[3px] p-2 border-slate-800 bg-rose-200 text-center md:text-left'>Moe's</h2>
                     </div>
 
                     <nav className={isHome ? 
-                            'order-1 md:order-2 mb-20 md:mb-0 flex gap-4 p-3 border-[3px] bg-slate-600' : 
-                            'order-1 md:order-2 mb-[50px] md:mb-0 flex gap-4 p-3 border-[3px] border-slate-800 bg-rose-200'}>
+                            'order-1 md:order-2 mb-20 md:mb-0 flex gap-4 p-3 border-[3px] bg-slate-600 justify-center' : 
+                            'order-1 md:order-2 mb-[50px] md:mb-0 flex gap-4 p-3 border-[3px] border-slate-800 bg-rose-200 justify-center'}>
                         <NavLink
                             to="/"
                             className={({isActive}) => isActive ?  

@@ -20,7 +20,7 @@ export default function IndexPage() {
                 </div>
             ) : (
                 <>
-                    <p className="my-10 text-center text-2xl">No hay resultados aún, debes buscar las recetas primero.</p>
+                    <p className="my-10 text-center text-2xl p-2 md:p-0">No hay resultados aún, debes buscar las recetas primero.</p>
                 </>
             )}
         </>

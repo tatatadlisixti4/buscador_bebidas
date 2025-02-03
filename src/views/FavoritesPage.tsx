@@ -18,7 +18,7 @@ export default function FavoritesPage() {
                     ))}
                 </div>
             ) : (
-                <p className="my-10 text-center text-2xl">
+                <p className="my-10 text-center text-2xl p-2 md:p-0">
                     No tienes favoritos guardados, añádelos desde el inicio.
                 </p>
             )}
