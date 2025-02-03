@@ -14,7 +14,7 @@ export default function AppRouter() {
                         <Suspense fallback="Cargando...">
                             <FavoritesPage />
                         </Suspense>
-                    } 
+                        } 
                     />
                 </Route>
             </Routes>
